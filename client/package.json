@@ -1,0 +1,12 @@
+{
+  "name": "quick-3d-mmorpg-client",
+  "version": "1.0.0",
+  "description": "Client for Quick 3D MMORPG",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
