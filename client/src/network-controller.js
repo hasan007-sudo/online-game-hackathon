@@ -1,8 +1,8 @@
 import 'https://cdn.jsdelivr.net/npm/socket.io-client@3.1.0/dist/socket.io.js';
 
-
 import {entity} from './entity.js';
 import { ui_controller } from './ui-controller.js';
+import config from './config.js';
 
 
 export const network_controller = (() => {
@@ -34,7 +34,7 @@ export const network_controller = (() => {
     }
 
     SetupSocket_() {
-      this.socket_ = io('ws://localhost:3000', {
+      this.socket_ = io(config.websocketUrl, {
           reconnection: false,
           transports: ['websocket'],
           timeout: 10000,

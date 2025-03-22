@@ -4,6 +4,7 @@ import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.124/examples/j
 import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.124/examples/jsm/loaders/FBXLoader.js';
 
 import 'https://cdn.jsdelivr.net/npm/socket.io-client@3.1.0/dist/socket.io.js';
+import config from './src/config.js';
 
 
 const _CHARACTER_MODELS = {
@@ -1023,7 +1024,7 @@ class BasicMMODemo {
   }
 
   SetupSocket_() {
-    this.socket_ = io('ws://localhost:3000', {
+    this.socket_ = io(config.websocketUrl, {
         reconnection: false,
         transports: ['websocket'],
     });
