@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Client for Quick 3D MMORPG",
   "main": "index.html",
+  "type": "module",
   "scripts": {
-    "start": "serve -s ."
+    "start": "node server.js",
+    "build": "mkdir -p public && cp -r *.html *.css resources src env-config.js public/"
   },
   "dependencies": {
-    "serve": "^14.2.1"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
   }
 }

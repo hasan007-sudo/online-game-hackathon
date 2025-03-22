@@ -1,15 +1,12 @@
 // Configuration file to centralize environment variables
 // This allows for easy switching between environments
 
-// Default values (fallbacks)
-const defaultConfig = {
-  websocketUrl: 'wss://online-game-hackathon.onrender.com',
-};
-
-// Try to load from environment variables if available
-// This approach works with various bundlers that support env variables
+// Get environment variables from window.ENV (injected by env-config.js)
+// with fallback values if not available
 const config = {
-  websocketUrl: process.env.WEBSOCKET_URL || defaultConfig.websocketUrl,
+  // Use the environment variable from window.ENV if available,
+  // otherwise fall back to the default value
+  websocketUrl: (window.ENV && window.ENV.WEBSOCKET_URL) || 'wss://online-game-hackathon.onrender.com'
 };
 
 export default config;
