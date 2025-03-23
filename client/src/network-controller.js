@@ -1,4 +1,4 @@
-import 'https://cdn.jsdelivr.net/npm/socket.io-client@3.1.0/dist/socket.io.js';
+import 'https://cdn.jsdelivr.net/npm/socket.io-client@4.8.1/dist/socket.io.js';
 
 import {entity} from './entity.js';
 import { ui_controller } from './ui-controller.js';
